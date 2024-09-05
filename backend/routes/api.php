@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Courses;
 use App\Models\User;
+use App\Models\Coach;
+use App\Models\Courses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,9 @@ Route::get('/courses',function(){
 
 Route::get('/users',function() {
     return response()->json(User::all());
+});
+
+Route::get('/coach_courses/{id}', function(Request $request){
+    $coach = Coach::find($request->id);
+    return response()->json($coach->courses);
 });

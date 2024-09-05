@@ -44,11 +44,7 @@ class CoursesCrudController extends CrudController
             'label' => 'Course Title',
             'type' => 'text'
         ]);
-        Crud::column([
-            'name' => 'author',
-            'label' => 'Course Author',
-            'type' => 'text'
-        ]);
+       
         /**
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
@@ -65,7 +61,6 @@ class CoursesCrudController extends CrudController
     {
         CRUD::setValidation(CoursesRequest::class);
         CRUD::field('title')->type('text');
-        CRUD::field('author')->type('text');
         CRUD::field([  // Select
             'label'     => "Chapter1",
             'type'      => 'select',
@@ -74,7 +69,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -88,7 +82,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -102,7 +95,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -116,7 +108,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -130,7 +121,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -144,7 +134,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -158,7 +147,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -172,7 +160,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -186,7 +173,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -200,7 +186,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -214,7 +199,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -228,7 +212,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -242,7 +225,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -256,7 +238,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -270,7 +251,6 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
@@ -284,13 +264,28 @@ class CoursesCrudController extends CrudController
             // optional
             // 'entity' should point to the method that defines the relationship in your Model
             // defining entity will make Backpack guess 'model' and 'attribute'
-            'entity'    => 'chapter',
          
             // optional - manually specify the related model and attribute
             'model'     => "App\Models\Chapter", // related model
             'attribute' => 'title',
             'pivot' => true
         ]);
+        CRUD::field([  // Select
+            'label'     => "Coach",
+            'type'      => 'select',
+            'name'      => 'coach_id', // the db column for the foreign key
+         
+            // optional
+            // 'entity' should point to the method that defines the relationship in your Model
+            // defining entity will make Backpack guess 'model' and 'attribute'
+            'entity'    => 'coach',
+         
+            // optional - manually specify the related model and attribute
+            'model'     => "App\Models\Coach", // related model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+         
+             //  you can use this to filter the results show in the select
+         ]);
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');

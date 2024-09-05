@@ -10,7 +10,7 @@ class Courses extends Model
     use CrudTrait;
     protected $fillable = [
         'title',
-        'author',
+        'coach_id',
         'videos'
     ];
     protected $casts = [
@@ -18,7 +18,7 @@ class Courses extends Model
     ];
     use HasFactory;
 
-    public function post()
+    public function coach()
     {
         return $this->belongsTo(Coach::class);
     }
