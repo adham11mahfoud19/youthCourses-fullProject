@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Courses;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,8 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 Route::get('/courses',function(){
     return response()->json(Courses::all());
+});
+
+Route::get('/users',function() {
+    return response()->json(User::all());
 });

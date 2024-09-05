@@ -72,6 +72,16 @@ class UserCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
+
+        CRUD::addSaveAction(
+            [
+                'name' => 'action',
+                'redirect' => function($curd){
+                    return $curd->route;
+                }
+
+            ]
+            );
         $this->setupCreateOperation();
     }
 }

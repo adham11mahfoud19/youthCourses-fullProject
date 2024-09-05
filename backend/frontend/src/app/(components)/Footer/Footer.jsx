@@ -5,7 +5,11 @@ import { LuNetwork, LuPlaneTakeoff } from 'react-icons/lu'
 const Footer = () => {
   return (
     <div className='grid grid-cols-3 md:gap-5 h-[200px] text-white mt-12 md:h-[400px] py-6 px-8 justify-center items-center bg-grayPrime'>
+<<<<<<< HEAD
+             <div className='flex md:hidden text-[12px] gap-6 justify-center mx-auto items-center w-[300px]'>
+=======
              <div className='flex md:hidden text-[12px] gap-6 justify-center mx-auto items-center md:w-[300px] w-[375px]'>
+>>>>>>> 589d5fde57a26c2b61b86e3d50c8beee906a1973
                     <h1 className='md:text-3xl font-bold'>الرئيسية</h1>
                     <h1 className='md:text-3xl font-bold'>سياسة الخصوصية</h1>
                     <h1 className='md:text-3xl font-bold'>الأحكام والشروط</h1>
@@ -13,22 +17,38 @@ const Footer = () => {
 
             <div className='md:flex md:h-[250px] hidden  flex-col gap-4 justify-center items-center border-l-2 border-black'>
 
+<<<<<<< HEAD
+                    <div className='flex gap-4  w-[100%] items-center justify-evenly'>
+                        <LuNetwork className='text-green-700 text-3xl' />
+=======
                     <div className='flex gap-4  w-[100%] items-center p-[12px] justify-between'>
                         <LuNetwork className='text-green-700 text-2xl' />
+>>>>>>> 589d5fde57a26c2b61b86e3d50c8beee906a1973
                         <p className='text-xl'>
                             www.youth-guide.com
                         </p>
                     </div>
 
+<<<<<<< HEAD
+                    <div className='flex gap-4  w-[100%] items-center justify-evenly'>
+                        <FaSearchLocation className='text-green-700 text-3xl' />
+                        <p className='text-xl'>
+=======
                     <div className='flex gap-4  w-[100%] items-center p-[12px] justify-between'>
                         <FaSearchLocation className='text-green-700 text-2xl' />
                         <p className='text-[14px]'>
+>>>>>>> 589d5fde57a26c2b61b86e3d50c8beee906a1973
                             مشروع الأوقاف جانب سنسيشن
                         </p>
                     </div>
 
+<<<<<<< HEAD
+                    <div className='flex gap-4 m-w-[1000px] w-[300px] items-center justify-between'>
+                        <FaPhone className='text-green-700 text-3xl' />
+=======
                     <div className='flex gap-4 w-[100%] items-center p-[12px] justify-between'>
                         <FaPhone className='text-green-700 text-2xl' />
+>>>>>>> 589d5fde57a26c2b61b86e3d50c8beee906a1973
                         <p className='text-xl'>
                             0912345678
                         </p>
