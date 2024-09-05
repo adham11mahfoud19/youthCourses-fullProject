@@ -18,7 +18,9 @@ class Courses extends Model
     ];
     use HasFactory;
 
-    public function chapter(){
-        return $this->belongsTo(Chapter::class);
+    public function post()
+    {
+        return $this->belongsTo(Coach::class);
     }
+    
 }

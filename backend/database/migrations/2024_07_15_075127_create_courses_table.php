@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('author');
+            $table->string('coach_id')->constrained()->onDelete('cascade');
             $table->string('chapter1')->nullable();
             $table->string('chapter2')->nullable();
             $table->string('chapter3')->nullable();
