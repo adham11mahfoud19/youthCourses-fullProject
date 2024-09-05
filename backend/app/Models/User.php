@@ -25,7 +25,9 @@ class User extends Authenticatable
         "phone",
         'email',
         'password',
-        'courses'
+        'courses',
+        'singleCourseBuyDate',
+        'fullSubscriptionBuyDate'
     ];
 
     /**
